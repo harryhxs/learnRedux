@@ -1,0 +1,21 @@
+var webpack=require('webpack');
+module.exports={
+    entry:__dirname+'/index.js',
+    output:{
+        path:__dirname+'/build',
+        filename:'bundle.js'
+    },
+    module:{
+        loaders:[
+            {
+                test:/\.(js|jsx)$/,
+                exclude:/node_moules/,
+                loader:'babel-loader'
+            }
+        ]
+    },
+    devServer:{
+        contentBase:'./build',
+        port:'8888'
+    }
+};
