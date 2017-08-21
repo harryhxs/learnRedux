@@ -4,6 +4,7 @@ import Link from "../components/Link"
 
 const mapStateToProps=(state,ownProps)=>{
     return {
+        //判断点击时传进来的filter和状态的filter是否相等
         active:ownProps.filter===state.visibilityFilter
     }
 };
